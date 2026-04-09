@@ -9,9 +9,9 @@ class Node:
 # Binary Tree
 class Node:
     def __init__(self, data):
-        self.data=data
-        self.left=None
-        self.right=None
+        self.data=data      # Member Variable
+        self.left=None      # Member Variable
+        self.right=None     # Member Variable
     def __init__(self):
         self.root=None
     def insert(self,data):
