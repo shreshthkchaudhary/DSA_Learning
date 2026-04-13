@@ -18,3 +18,25 @@ class Node:
             return
         
         #   for Node after first Node
+        queue=[]
+        queue.append(root)
+            while queue:
+                temp = queue.pop(0)
+                if temp.left==None:
+                    temp.left=new_node
+                    return
+                elif temp.right==None:
+                    temp.right=new_node
+                    return
+                else queue.append(temp.left)
+        
+
+        def insert(node, data):
+            if node is None:
+                return TreeNode(data)
+            else:
+                if data < node.data:
+                    node.left = insert(node.left, data)
+                elif data > node.data:
+                    node.right = insert(node.right, data)
+            return node
