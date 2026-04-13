@@ -16,6 +16,9 @@ class Node:
         self.root=None
     def insert(self,data):
         new_node=Node(data)
+
+        #   for first Node
         if self.root==None:
             self.root=new_node
             return
+        
